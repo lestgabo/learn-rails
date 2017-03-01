@@ -39,8 +39,18 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    autoprefixer-rails (6.7.6)
+      execjs
+    better_errors (2.1.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+      rack (>= 0.9.0)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
+    coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.2.x)
@@ -52,9 +62,15 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
+    faraday (0.11.0)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.17)
+    gibbon (3.0.1)
+      faraday (>= 0.9.1)
+      multi_json (>= 1.11.0)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    high_voltage (3.0.0)
     i18n (0.8.1)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
@@ -77,6 +93,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
+    multipart-post (2.0.0)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -101,6 +118,7 @@ GEM
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_layout (1.0.34)
     railties (5.0.1)
       actionpack (= 5.0.1)
       activesupport (= 5.0.1)
@@ -118,6 +136,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    simple_form (3.4.0)
+      actionpack (> 4, < 5.1)
+      activemodel (> 4, < 5.1)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -154,21 +175,29 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
+  bootstrap-sass
   byebug
   coffee-rails (~> 4.2)
+  gibbon
+  high_voltage
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
   puma (~> 3.0)
-  rails (~> 5.0.1)
+  rails (~> 5.0.0, >= 5.0.0.1)
+  rails_layout
   sass-rails (~> 5.0)
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
   turbolinks (~> 5)
-  tzinfo-data
   uglifier (>= 1.3.0)
-  web-console (>= 3.3.0)
+  web-console
+
+RUBY VERSION
+   ruby 2.3.0p0
 
 BUNDLED WITH
    1.14.5
