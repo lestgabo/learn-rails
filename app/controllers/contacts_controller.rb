@@ -6,11 +6,19 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(secure_params)
     if @contact.valid?
-      UserMailer.contact_email(@contact).deliver_now
+# email = params[:contact][:email]
+# body = params[:contact][:comments]
+# # Plug variables into Contact Mailer
+# # email method and send email
+# ContactMailer.contact_email(email, body).deliver
+      name = params[:contact][:name]
+      email = params[:contact][:email]
+      content = params[:contact][:content]
+      UserMailer.contact_email(name, email, content).deliver_now
       flash[:notice] = "Message sent from #{@contact.name}."
       redirect_to root_path
     else
-    render :new
+      render :new
     end
   end
   private

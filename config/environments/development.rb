@@ -60,6 +60,11 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   # Send email in development mode?
   config.action_mailer.perform_deliveries = true
+  
+  class Application < Rails::Application
+    config.web_console.whitelisted_ips = false #'50.67.63.85'
+  end
+
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
