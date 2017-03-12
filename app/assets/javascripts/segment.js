@@ -80,15 +80,15 @@
   // load the tools you've enabled for your account. Boosh!
   analytics.load("mPoszhYCNXyU7So8EtMvXIxXYpJbtX9E");
   
-  
-  // accommodate Turbolinks
-  // track page views and form submissions
-  $(document).on('turbolinks:load', function() {
-    console.log('page loaded');
-    analytics.page();
-    analytics.trackForm($('#new_visitor'), 'Signed Up');
-    analytics.trackForm($('#new_contact'), 'Contact Request');
-  })
-  
+
 })();
 
+  
+// accommodate Turbolinks
+// track page views and form submissions
+$(document).on('turbolinks:load', function() {
+  console.log('page loaded');
+  analytics.page();
+  analytics.trackForm($('#new_visitor'), 'Signed Up');
+  analytics.trackForm($('#new_contact'), 'Contact Request');
+})
