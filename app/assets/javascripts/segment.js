@@ -25,3 +25,6 @@ $(document).on('turbolinks:load', function() {
   analytics.trackForm($('#new_visitor'), 'Signed Up');
   analytics.trackForm($('#new_contact'), 'Contact Request');
 })
+
+// Analytics work, unfortunately the ublock extension blocks it
+// everyone uses ublock, how would I check if there are any analytics? LOL
