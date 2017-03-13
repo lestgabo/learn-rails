@@ -14,6 +14,10 @@ class VisitorsController < ApplicationController
     end
   end
   
+  def more
+    
+  end
+  
   private
   
     def secure_params
