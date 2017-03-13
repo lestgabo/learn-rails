@@ -19,7 +19,7 @@ class VisitorsController < ApplicationController
     require 'json'
     
     @test5 = {}
-    url = 'https://www.reddit.com/r/noveltranslations/new.json'
+    url = 'https://www.reddit.com/r/NatalieDormer/top.json?sort=top&t=all'
     response = RestClient.get(url)
     doc = JSON.parse(response.body)
     @test = doc['data']['children']

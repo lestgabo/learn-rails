@@ -20,6 +20,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+# MORE DORMER
+gem 'rest-client'
+
 # learn-rails
 gem 'bootstrap-sass'
 gem 'gibbon'
