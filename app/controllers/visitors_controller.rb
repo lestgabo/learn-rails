@@ -15,7 +15,25 @@ class VisitorsController < ApplicationController
   end
   
   def more
+    require 'rest-client'
+    require 'json'
     
+    @test5 = Hash.new
+    url = 'https://www.reddit.com/r/noveltranslations/new.json'
+    response = RestClient.get(url)
+    doc = JSON.parse(response.body)
+    @test = doc['data']['children']
+    
+    # @test = doc['data']['children'] -> is at children, an array containing 2 things -> kind: and data:
+    # I need to extract title and url from data:
+    (0..@test.size-1).each do |i|
+      @test[i].map do |j|
+        # j[1] means the second index of children, so it will be data:
+        @test3 = j[1]['title']
+        @test4 = j[1]['url']
+        @test5[@test3] = @test4
+      end
+    end
   end
   
   private
