@@ -18,7 +18,7 @@ class VisitorsController < ApplicationController
     require 'rest-client'
     require 'json'
     
-    @test5 = Hash.new
+    @test5 = {}
     url = 'https://www.reddit.com/r/noveltranslations/new.json'
     response = RestClient.get(url)
     doc = JSON.parse(response.body)
