@@ -9,22 +9,24 @@
 
 <div class ="container">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <h3>Natalie Dormer. Want more?</h3>
+    <div class="col-md-6 col-md-offset-4">
+      <h3>Natalie Dormer. Want
+      <%= link_to more_path, class:"hidden-link" do  %>
+      more?
+      <% end %>
+      </h3>
     </div>
   </div>
 </div>
 
 <div class ="container">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <h3 class="centered">
+    <div class="col-md-3 col-md-offset-4">
         <%= simple_form_for @visitor do |f| %>
           <%= f.error_notification %>
           <%= f.input :email, label: false, :placeholder => 'Your email address...' %>
-          <%= f.button :submit, "Get more!", :class => "btn btn-success" %>
+          <%= f.button :submit, "Get more Dormer!", :class => "btn btn-success" %>
         <% end %>
-      </h3>
     </div>
   </div>
 </div>

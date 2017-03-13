@@ -14,6 +14,15 @@
  *= require_self
  */
 
+
 // MORE DORMER
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
+
+.hidden-link, a:hover, a:focus{
+  text-decoration: none;
+  color: black;
+}
+
+ 
