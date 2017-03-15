@@ -42,15 +42,15 @@ class VisitorsController < ApplicationController
           @test4 = @test4[0,@test4.size-1]
         elsif @test4[8,6] == "gfycat"
           @test4 = @test4.sub!("https://gfycat.com/","")
-      #    @test4 = "<div style='position:relative;padding-bottom:57%'><iframe src='https://gfycat.com/ifr/#{@test4}' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>"
-      #    @test4 = @test4.to_s
         elsif @test4[7,6] == "gfycat"
           @test4 = @test4.sub!("http://gfycat.com/","")
-      #    @test4 = @test4.to_s
         end
         @test5[@test3] = @test4
+        
       end
     end
+    # very first @test5 seems to be a nil=>"", therefore I am going to remove that first index with the next line
+    @test5.shift
   end
   
   private
