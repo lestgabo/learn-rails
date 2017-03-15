@@ -33,6 +33,15 @@ class VisitorsController < ApplicationController
         # j[1] means the second index of children, so it will be data:
         @test3 = j[1]['title']
         @test4 = j[1]['url']
+ 
+        @test4 = @test4.to_s
+        if @test4[7,5] == "imgur" 
+          @test4 = @test4.sub!("http://","")
+          @test4 = "http://i.#{@test4}.jpeg"
+        elsif @test4[-1] == "v"
+          @test4 = @test4[0,@test4.size-1]
+        end
+        
         @test5[@test3] = @test4
       end
     end
