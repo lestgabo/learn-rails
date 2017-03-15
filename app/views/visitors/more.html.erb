@@ -5,15 +5,19 @@
   <div class="row">
     <!--<h3 class="text-center">Scraped from Reddit's /r/NatalieDormer top 25 all time.</h3>-->
     <!-- specifically from url => 'https://www.reddit.com/r/NatalieDormer/top.json?sort=top&t=all' -->
-    <h2 class="text-center"><strong>The Natalie Dormers below are NOT SAFE FOR WORK (NSFW).</strong></h2>
-    <h2 class="text-center"><strong>Seriously, it is very sexy down there. I warned you.</strong></h2>
+    <h2 class="text-center">The Natalie Dormers below are NOT SAFE FOR WORK! <strong style="color:red;">(NSFW)</strong>
+    </h2>
+    <br>
+    
     <br>
     <strong>
-      <%= link_to root_path, class:"btn btn-danger" do %>
+      <%= link_to root_path, class:"btn-back-to-home btn-danger" do %>
         Back to home page.
       <% end %>
     </strong>
-
+    <br>
+    <br>
+    
     <% @test5.each do |title, link| %>
     <h2>
       <%= title %> 
