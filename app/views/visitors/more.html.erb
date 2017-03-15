@@ -14,16 +14,27 @@
       <% end %>
     </strong>
     
+   <!--<div style='position:relative;padding-bottom:57%'><iframe src='https://gfycat.com/ifr/HeftyIncredibleBighornedsheep' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' ></iframe></div>-->
 
     <% @test5.each do |title, link| %>
-      <h2> <%= title %>
-      <% if link[0,4] != "http" %>
-        <div style='position:relative;padding-bottom:57%'><iframe src='https://gfycat.com/ifr/<%= link %>' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
-        <br/></h2> 
-      <% else %>
-        <%= image_tag "#{link}" %> 
-        <br/></h2> 
+    <h2>
+       <!--<%= title %> <br/>-->
+      <%= link %>
+
+      <% if link[0,4] == "http" %>
+        <% where = "INSIDE HTTP" %> 
       <% end %>
+      
+      <% if link[0,5] == "https" %>
+        <% where = "INSIDE HTTPSSSS" %> 
+      <% end %>
+      
+      <% if link[0,4] != "http" && link[0,5] != "https" %>
+        <% where = "INSIDE NOTHING" %>
+      <% end %>
+      <%= where %>
+    <br/>
+    </h2> 
     <% end %>
   </div>
 </div>
