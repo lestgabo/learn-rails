@@ -37,11 +37,16 @@ class VisitorsController < ApplicationController
         @test4 = @test4.to_s
         if @test4[7,5] == "imgur" 
           @test4 = @test4.sub!("http://","")
-          @test4 = "http://i.#{@test4}.jpeg"
+          @test4 = "https://i.#{@test4}.jpeg"
         elsif @test4[-1] == "v"
           @test4 = @test4[0,@test4.size-1]
+        elsif @test4[8,6] == "gfycat"
+          @test4 = @test4.sub!("https://gfycat.com/","")
+          @test4 = @test4.to_s
+        elsif @test4[7,6] == "gfycat"
+          @test4 = @test4.sub!("http://gfycat.com/","")
+          @test4 = @test4.to_s
         end
-        
         @test5[@test3] = @test4
       end
     end

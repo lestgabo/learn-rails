@@ -13,15 +13,17 @@
         Back to home page.
       <% end %>
     </strong>
+    
 
     <% @test5.each do |title, link| %>
-      <!--http://i.imgur.com/UmuTWNB.jpg-->
-
-      <%= link %>
-    
-      
-      <h2> <%= title %> <%= image_tag "#{link}" %> <br/></h2> 
-      
+      <h2> <%= title %>
+      <% if link[0,4] != "http" %>
+        <div style='position:relative;padding-bottom:57%'><iframe src='https://gfycat.com/ifr/<%= link %>' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div>
+        <br/></h2> 
+      <% else %>
+        <%= image_tag "#{link}" %> 
+        <br/></h2> 
+      <% end %>
     <% end %>
   </div>
 </div>
