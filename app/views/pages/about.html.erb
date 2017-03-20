@@ -9,10 +9,13 @@
 <div class ="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-4">
-      <h3>About Natalie Dormer</h3>
-      <p>She was born in Reading, Berkshire, England, UK. An english actress...
-      <br>
-      Anyways, look at her again. Look at her reading her book. Isn't she amazing?
+      <h1>About Natalie Dormer</h1>
+      <p>
+        <%= link_to more_path, class:"hidden-link" do  %>
+          She was born in Reading, Berkshire, England, UK. An english actress...
+          <br>
+          Enough of that, let's just look at her again. Isn't she amazing?
+        <% end %>
       </p>
     </div>
   </div>
