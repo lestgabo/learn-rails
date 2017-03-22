@@ -35,6 +35,10 @@ class VisitorsController < ApplicationController
         @test4 = j[1]['url']
  
         @test4 = @test4.to_s
+        if @test4.include?("reddituploads.com")
+          @test4 = @test4.gsub!("amp;","")
+        end
+        
         if @test4[7,5] == "imgur" 
           @test4 = @test4.sub!("http://","")
           @test4 = "https://i.#{@test4}.jpeg"
@@ -73,6 +77,10 @@ class VisitorsController < ApplicationController
         
         
         @test4 = @test4.to_s
+        if @test4.include?("reddituploads.com")
+          @test4 = @test4.gsub!("amp;","")
+        end
+        
         if @test4.include?("imgur.com/a/")
           #http://imgur.com/a/0WiEn#0
           @test4 = @test4.sub!("http://imgur.com/","")
