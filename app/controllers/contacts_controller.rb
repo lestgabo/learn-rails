@@ -18,7 +18,9 @@ class ContactsController < ApplicationController
       flash[:notice] = "Message sent from #{@contact.name}."
       redirect_to root_path
     else
-      render :new
+      # render :new
+      flash[:danger] = @contact.errors.full_messages.join(", ")
+      redirect_to new_contact_path
     end
   end
   private
