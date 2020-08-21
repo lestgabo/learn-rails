@@ -1,5 +1,5 @@
-# Learning Rails
-Learning Rails with tutorials from [learn-rails.com](http://learn-rails.com/).
+# site link
+https://learn-rails-by-daniel-kehoe.herokuapp.com/
 
-Turned the tutorial into a Natalie Dormer fan page. 
+Natalie Dormer fan page. 
 There is also a hidden Emma Watson fan page.
